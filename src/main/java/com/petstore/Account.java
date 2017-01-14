@@ -16,6 +16,15 @@ public class Account {
     @OneToMany(mappedBy = "account")
     private Set<Bookmark> bookmarks = new HashSet<>();
 
+    @OneToMany(mappedBy = "account")
+    private Set<Pet> pets = new HashSet<>();
+
+    public Set<Pet> getPets() {
+        return pets;
+    }
+
+
+
     @Id
     @GeneratedValue
     private Long id;
